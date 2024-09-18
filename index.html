@@ -4,20 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokyny pro vypracování protokolu pH-potenciometrie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin: 20px;
+            font-size: 1.8rem;
+        }
+        p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin: 10px;
+            max-width: 600px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+        .image-container img:hover {
+            transform: scale(1.2);
+        }
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+            font-size: 0.95rem;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .instructions {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 700px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .question-section {
+            margin-top: 20px;
+        }
+        .question-section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .question-section p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Chci pouze excelovský file ve formátu příjmení.xlsx</h1>
-    <p>správně označené osy, názvy grafů</p>
-    <p>Žádná plovoucí čísla bez popisků a jednotek, správně zaokrouhlené výsledky</p>
-    <img src="https://github.com/user-attachments/assets/912dc21f-6c91-4407-984d-0c98428f5b0b" alt="pls dont do this" width="120">
-    <img src="https://github.com/user-attachments/assets/0d1f8054-31b0-46b1-ba77-c1f44aa0ee42" alt="huh cat" width="50">
-    <p>Za každé desetinné číslo navíc zemře jedno koťátko</p>
-    <p>Tabulka na závěr, kde jsou tři dílčí hmotnosti H3PO4 a KH2PO4, jejich průměr a směrodatná odchylka</p>
-    <p>Vypracování těchto otázek: 
-    1) K čemu jsme v dnešní úloze používali dihydrát šťavelky, a proč nám nestačila třeba bezvodá forma?
-    2) H3PO4 může disociovat celkem třikrát, ale přesto jsme na titrační křivce pozorovali pouze 2 inflexní body. Proč?
-    3) Popište, co by se stalo s titrační křivkou, kdyby se titr (koncentrace NaOH) dvakrát zvýšil. Jak by se to projevilo v okolí BE? Jak by vypadala osa x (přidaný objem)? Můžete popsat, vyplotit fiktivní data, nakreslit atd.
-    4) 
-    </p>
+    <div class="instructions">
+        <h1>Pokyny pro vypracování protokolu pH-potenciometrie</h1>
+        <p>Chci pouze excelovský file ve formátu příjmení.xlsx</p>
+        <ul>
+            <li>Správně označené osy, názvy grafů</li>
+            <li>Tabulka na závěr, kde jsou tři dílčí hmotnosti H3PO4 a KH2PO4, jejich průměr a směrodatná odchylka</li>
+            <li>Žádná plovoucí čísla bez popisků a jednotek, správně zaokrouhlené výsledky v závěrečné tabulce</li>
+        </ul>
+
+        <div class="image-container">
+            <img src="https://github.com/user-attachments/assets/912dc21f-6c91-4407-984d-0c98428f5b0b" alt="pls dont do this" width="120">
+            <img src="https://github.com/user-attachments/assets/0d1f8054-31b0-46b1-ba77-c1f44aa0ee42" alt="huh cat" width="45">
+        </div>
+
+        <h2>Pravidla zaokrouhlování:</h2>
+        <p>Při sčítání nebo odečítání zaokrouhluju na stejný počet desetinných míst, jako má ve výpočtu číslo s nejmenším počtem desetinných míst, například:</p>
+        <ul>
+            <li>11.2 + 0.30 + 1.005 = 12.505 = 12.5</li>
+        </ul>
+        <p>Při dělení nebo násobení zaokrouhluju výsledek tak, aby obsahoval stejný počet platných číslic jako číslo ve výpočtu s nejmenším počtem platných číslic, například:</p>
+        <ul>
+            <li>2 * 2.11 / 1.000 = 4.22 = 4</li>
+        </ul>
+
+        <div class="question-section">
+            <h2>Vypracujete mi tyto otázky:</h2>
+            <p><strong>1)</strong> K čemu jsme v dnešní úloze používali dihydrát šťavelky, a proč nám nestačila třeba bezvodá forma?</p>
+            <p><strong>2)</strong> H3PO4 může disociovat celkem třikrát, ale přesto jsme na titrační křivce pozorovali pouze 2 inflexní body. Proč?</p>
+            <p><strong>3)</strong> Popište, co by se stalo s titrační křivkou, kdyby se titr (koncentrace NaOH) dvakrát zvýšil. Jak by se to projevilo v okolí BE? Jak by vypadala osa x (přidaný objem)? Můžete popsat, vyplotit fiktivní data, nakreslit atd.</p>
+        </div>
+    </div>
 </body>
 </html>
