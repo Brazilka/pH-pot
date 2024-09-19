@@ -92,11 +92,24 @@
             background-size: cover;
             background-position: center;
             padding: 20px;
-            opacity: 0.7;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
             max-width: 600px;
             color: #333; 
+        }
+        .flower-frame::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: inherit;
+        background-size: inherit;
+        background-position: inherit;
+        border-radius: inherit;
+        opacity: 0.7; /* Makes only the image more opaque */
+        z-index: -1; /* Ensures the image is behind the text */
         }
         ul {
             margin-top: 10px;
